@@ -116,7 +116,7 @@ fn _gettime_as_nsec_unix(clockid: Int) -> Int:
 
 @always_inline
 fn _realtime_nanoseconds() -> Int:
-    """Returns the current realtime time in nanoseconds"""
+    """Returns the current realtime time in nanoseconds."""
     return _gettime_as_nsec_unix(_CLOCK_REALTIME)
 
 
