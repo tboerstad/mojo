@@ -70,7 +70,7 @@ fn __wrap_and_execute_main[
     argc: Int32,
     argv: __mlir_type[`!kgen.pointer<!kgen.pointer<scalar<ui8>>>`],
 ) -> Int32:
-    """Define a C-ABI compatible entry point for non-raising main function"""
+    """Define a C-ABI compatible entry point for a non-raising main function"""
 
     # Initialize the global runtime.
     _ = _get_current_or_global_runtime()
