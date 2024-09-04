@@ -441,7 +441,7 @@ struct Dict[K: KeyElement, V: CollectionElement](
 
     @always_inline
     fn __init__(inout self):
-        """Initialize an empty dictiontary."""
+        """Initialize an empty dictionary."""
         self.size = 0
         self._n_entries = 0
         self._reserved = Self._initial_reservation
@@ -450,7 +450,7 @@ struct Dict[K: KeyElement, V: CollectionElement](
 
     @always_inline
     fn __init__(inout self, existing: Self):
-        """Copy an existing dictiontary.
+        """Copy an existing dictionary.
 
         Args:
             existing: The existing dict.
