@@ -84,7 +84,7 @@ def test_destructor():
     # It's important that we only destroy the first 8 elements, and not the 32 elements.
     # This is because we assume that the last 24 elements are not initialized (not true in this case,
     # but if we ever run the destructor on the fake 24 uninitialized elements,
-    # it will be accounted for in destructor_counter).
+    # it will be accounted for in the destructor_counter).
     assert_equal(len(destructor_counter), 8)
     for i in range(8):
         assert_equal(destructor_counter[i], i)
