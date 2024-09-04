@@ -116,7 +116,7 @@ fn test_rmdir_not_empty() raises:
     assert_false(exists(my_dir_path), "Failed to remove dir")
 
 
-def main():
+fn main():
     test_mkdir_and_rmdir()
     test_mkdir_mode()
     test_rmdir_not_empty()
