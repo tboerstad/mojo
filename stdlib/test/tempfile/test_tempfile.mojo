@@ -50,7 +50,7 @@ struct TempEnvWithCleanup:
     var vars_to_set: Dict[String, String]
     var _vars_back: Dict[String, String]
     var clean_up_function: fn () raises -> None
-    """Function called after the context manager exits if an error occurs."""
+    """Function called after the context manager exits."""
 
     fn __init__(
         inout self,
