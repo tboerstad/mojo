@@ -238,7 +238,7 @@ struct Python:
         """Raise an exception if CPython interpreter is in an error state.
 
         Args:
-            cpython: The cpython instance we wish to error check.
+            cpython: The CPython instance we wish to error check.
         """
         if cpython.PyErr_Occurred():
             var error: Error = str(PythonObject(cpython.PyErr_Fetch()))
