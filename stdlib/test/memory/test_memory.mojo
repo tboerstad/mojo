@@ -190,13 +190,13 @@ def test_memcmp_extensive[
         dptr1[i] = i
 
         @parameter
-        if extermes == "":
+        if extremes == "":
             ptr2[i] = i + 1
             dptr2[i] = i + 1
-        elif extermes == "nan":
+        elif extremes == "nan":
             ptr2[i] = nan[type]()
             dptr2[i] = nan[type]()
-        elif extermes == "inf":
+        elif extremes == "inf":
             ptr2[i] = Scalar[type].MAX
             dptr2[i] = Scalar[type].MAX
 

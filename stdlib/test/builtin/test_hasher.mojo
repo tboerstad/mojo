@@ -71,7 +71,7 @@ struct ComplexHashableStruct(_HashableWithHasher):
 
 def test_complex_hasher():
     var hasher = DummyHasher()
-    var hashable = ComplexeHashableStruct(
+    var hashable = ComplexHashableStruct(
         SomeHashableStruct(42), SomeHashableStruct(10)
     )
     hasher.update(hashable)
@@ -79,7 +79,7 @@ def test_complex_hasher():
 
 
 def test_complex_hash_with_hasher():
-    var hashable = ComplexeHashableStruct(
+    var hashable = ComplexHashableStruct(
         SomeHashableStruct(42), SomeHashableStruct(10)
     )
     assert_equal(_hash_with_hasher[DummyHasher](hashable), 52)
