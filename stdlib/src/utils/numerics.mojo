@@ -347,7 +347,7 @@ struct FPUtils[
 
 
 struct FlushDenormals:
-    """Flushes and denormals are set to zero within the context and the state
+    """Flushes denormals to zero within the context and the state
     is restored to the prior value on exit."""
 
     var state: Int32
@@ -929,7 +929,7 @@ fn ulp[
     the number.
 
     Constraints:
-        The element type of the inpiut must be a floating-point type.
+        The element type of the input must be a floating-point type.
 
     Parameters:
         type: The `dtype` of the input and output SIMD vector.
