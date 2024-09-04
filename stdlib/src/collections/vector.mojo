@@ -54,14 +54,14 @@ struct _VecIter[
 
 @always_inline
 fn _calculate_fixed_vector_default_size[type: AnyTrivialRegType]() -> Int:
-    alias prefered_bytecount = 64
+    alias preferred_bytecount = 64
     alias sizeof_type = sizeof[type]()
 
     @parameter
     if sizeof_type >= 256:
         return 0
 
-    alias prefered_inline_bytes = prefered_bytecount - sizeof[
+    alias preferred_inline_bytes = preferred_bytecount - sizeof[
         InlinedFixedVector[type, 0]
     ]()
     alias num_elements = prefered_inline_bytes // sizeof_type
