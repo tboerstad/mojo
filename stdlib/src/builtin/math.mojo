@@ -127,8 +127,8 @@ fn max(x: Int, y: Int) -> Int:
     """Gets the maximum of two integers.
 
     Args:
-        x: Integer input to max.
-        y: Integer input to max.
+        x: Integer input to min.
+        y: Integer input to min.
 
     Returns:
         Maximum of x and y.
