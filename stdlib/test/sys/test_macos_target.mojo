@@ -36,7 +36,7 @@ fn test_os_query() raises:
 
     assert_false(os_is_windows())
 
-    # The mac systems are either arm64 or intel, so they are always little
+    # The Mac systems are either arm64 or intel, so they are always little
     # endian at the moment.
 
     assert_true(is_little_endian())
