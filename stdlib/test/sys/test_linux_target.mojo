@@ -11,7 +11,7 @@
 # limitations under the License.
 # ===----------------------------------------------------------------------=== #
 #
-# This file is only run on linux targets.
+# This file is only run on Linux targets.
 #
 # ===----------------------------------------------------------------------=== #
 # REQUIRES: linux
