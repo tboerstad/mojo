@@ -173,11 +173,11 @@ def test_memcmp_simd():
     assert_equal(c, 1, "[..., 0, 120, 100] is bigger than [..., 0, 120, 90]")
 
     c = memcmp(p2, p1, length)
-    assert_equal(c, -1, "[..., 0, 120, 90] is smaller than [..., 120, 100]")
+    assert_equal(c, -1, "[..., 0, 120, 90] is smaller than [..., 0, 120, 100]")
 
 
 def test_memcmp_extensive[
-    type: DType, extermes: StringLiteral = ""
+    type: DType, extremes: StringLiteral = ""
 ](count: Int):
     var ptr1 = Pointer[Scalar[type]].alloc(count)
     var ptr2 = Pointer[Scalar[type]].alloc(count)
@@ -222,7 +222,7 @@ def test_memcmp_extensive[
         "for dtype="
         + str(type)
         + ";extremes="
-        + str(extermes)
+        + str(extremes)
         + ";count="
         + str(count),
     )
@@ -232,7 +232,7 @@ def test_memcmp_extensive[
         "for dtype="
         + str(type)
         + ";extremes="
-        + str(extermes)
+        + str(extremes)
         + ";count="
         + str(count),
     )
@@ -242,7 +242,7 @@ def test_memcmp_extensive[
         "for dtype="
         + str(type)
         + ";extremes="
-        + str(extermes)
+        + str(extremes)
         + ";count="
         + str(count),
     )
