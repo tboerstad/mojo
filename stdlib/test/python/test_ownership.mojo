@@ -67,7 +67,7 @@ fn test_getattr_ownership(inout python: Python) raises:
     assert_equal(string, "4")
 
 
-def main():
+fn main():
     # initializing Python instance calls init_python
     var python = Python()
 
