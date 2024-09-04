@@ -164,7 +164,7 @@ struct Atomic[type: DType]:
     ) -> Bool:
         """Atomically compares the self value with that of the expected value.
         If the values are equal, then the self value is replaced with the
-        desired value and True is returned. Otherwise, False is returned the
+        desired value and True is returned. Otherwise, False is returned and
         the expected value is rewritten with the self value.
 
         Args:
@@ -231,7 +231,7 @@ struct Atomic[type: DType]:
         """Performs atomic in-place max.
 
         Atomically replaces the current value with the result of max of the
-        value and arg. The operation is a read-modify-write operation perform
+        value and arg. The operation is a read-modify-write operation performed
         according to sequential consistency semantics.
 
         Constraints:
@@ -258,9 +258,8 @@ struct Atomic[type: DType]:
         """Performs atomic in-place min.
 
         Atomically replaces the current value with the result of min of the
-        value and arg. The operation is a read-modify-write operation. The
-        operation is a read-modify-write operation perform according to
-        sequential consistency semantics.
+        value and arg. The operation is a read-modify-write operation performed
+        according to sequential consistency semantics.
 
         Constraints:
             The input type must be either integral or floating-point type.
