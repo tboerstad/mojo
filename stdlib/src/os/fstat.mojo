@@ -47,7 +47,7 @@ fn _constrain_unix():
 
 @value
 struct stat_result(Stringable):
-    """Object whose fields correspond  to the members of the stat structure."""
+    """Object whose fields correspond to the members of the stat structure."""
 
     var st_mode: Int
     """File mode: file type and file mode bits (permissions)."""
@@ -210,7 +210,7 @@ fn stat[pathlike: os.PathLike](path: pathlike) raises -> stat_result:
     """Get the status of a file or a file descriptor.
 
     Parameters:
-      pathlike: The a type conforming to the os.PathLike trait.
+      pathlike: A type conforming to the os.PathLike trait.
 
     Args:
       path: The path to the directory.
