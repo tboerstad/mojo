@@ -62,8 +62,8 @@ def test_b16encode():
     assert_equal(b16encode("Hello 🔥!!!"), "48656C6C6F20F09F94A5212121")
 
     assert_equal(
-        b16encode("the quick brown fox jumps over the lazy dog"),
-        "74686520717569636B2062726F776E20666F78206A756D7073206F76657220746865206C617A7920646F67",
+        b16decode("74686520717569636B2062726F776E20666F78206A756D7073206F76657220746865206C617A7920646F67"),
+        "the quick brown fox jumps over the lazy dog",
     )
 
     assert_equal(b16encode("ABCDEFabcdef"), "414243444546616263646566")
