@@ -59,7 +59,7 @@ struct InlineString(Sized, Stringable, CollectionElement):
         self._storage = Self.Layout(fixed^)
 
     fn __init__(inout self, literal: StringLiteral):
-        """Constructs a InlineString value given a string literal.
+        """Constructs an InlineString value given a string literal.
 
         Args:
             literal: The input constant string.
@@ -304,7 +304,7 @@ struct _FixedString[CAP: Int](
     var buffer: InlineArray[UInt8, CAP]
     """The underlying storage for the fixed string."""
     var size: Int
-    """The number of elements in the vector."""
+    """The number of elements in the buffer."""
 
     # ===------------------------------------------------------------------===#
     # Life cycle methods
