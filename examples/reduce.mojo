@@ -76,7 +76,7 @@ fn bench[
 fn main() raises:
     print(
         "Sum all values in a small array and large array\n"
-        "Shows algorithm.sum from stdlib with much better performance\n"
+        "Shows algorithm.sum from stdlib with much better performance"
     )
     # Allocate and randomize data, then create two buffers
     var ptr_small = DTypePointer[type].alloc(size_small)
