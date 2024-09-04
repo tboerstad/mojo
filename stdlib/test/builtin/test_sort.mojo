@@ -569,7 +569,7 @@ struct Person(ComparableCollectionElement):
         return self.age != other.age or self.name != other.name
 
 
-def test_sort_comparamble_elements_list():
+def test_sort_comparable_elements_list():
     var list = List[Person]()
 
     @parameter
@@ -594,7 +594,7 @@ def test_sort_comparamble_elements_list():
     assert_sorted(list)
 
 
-fn test_sort_empty_comparamble_elements_list() raises:
+fn test_sort_empty_comparable_elements_list() raises:
     var person_list = List[Person]()
     sort(person_list)
     insertion_sort(person_list)
@@ -629,5 +629,5 @@ def main():
     test_sort_string_small_list()
     test_sort_string_big_list()
     test_sort_strings()
-    test_sort_comparamble_elements_list()
-    test_sort_empty_comparamble_elements_list()
+    test_sort_comparable_elements_list()
+    test_sort_empty_comparable_elements_list()
