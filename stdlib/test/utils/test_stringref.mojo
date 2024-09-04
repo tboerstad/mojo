@@ -101,7 +101,7 @@ def test_find():
     assert_equal(haystack_with_special_chars.find("@#$"), 7)
 
     assert_equal(haystack_repeated_chars.find("aaa"), 0)
-    assert_equal(haystack_repeated_chars.find("AAa"), -1)
+    assert_equal(haystack_repeated_chars.find("AAA"), -1)
 
     assert_equal(haystack.find("hijklmnopqrstuvwxyz"), -1)
 
