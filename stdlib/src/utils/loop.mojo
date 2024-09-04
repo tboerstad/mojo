@@ -109,7 +109,7 @@ fn unroll[
           arguments: one for each nested loop index value.
         dim0: The first dimension size.
         dim1: The second dimension size.
-        dim2: The second dimension size.
+        dim2: The third dimension size.
     """
 
     @parameter
