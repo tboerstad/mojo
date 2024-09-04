@@ -28,7 +28,7 @@ alias N = 4096  # cols of B and C
 alias K = 512  # cols of A and rows of B
 alias type = DType.float32
 
-# simdwidth of = amount of `type` elements that fit into a single SIMD register
+# simdwidth = amount of `type` elements that fit into a single SIMD register
 # 2x multiplier will use multiple SIMD registers in parallel where possible
 alias nelts = simdwidthof[type]() * 2
 alias tile_n = 64  # N must be a multiple of this
@@ -47,7 +47,7 @@ struct Matrix[rows: Int, cols: Int]:
     fn __init__(inout self, data: DTypePointer[type]):
         self.data = data
 
-    ## Initialize with random values
+    # Initialize with random values
     @staticmethod
     fn rand() -> Self:
         var data = DTypePointer[type].alloc(rows * cols)
@@ -236,7 +236,7 @@ fn bench[
 fn test_matrix_equal[
     func: fn (inout Matrix, Matrix, Matrix) -> None
 ](inout C: Matrix, A: Matrix, B: Matrix) raises -> Bool:
-    """Runs a matmul function on A and B and tests the result for equality with
+    """Run a matmul function on A and B and test the result for equality with
     C on every element.
     """
     var result = Matrix[M, N]()
@@ -262,7 +262,7 @@ fn test_all() raises:
     if not test_matrix_equal[matmul_tiled](C, A, B):
         raise Error("Tiled output does not match naive implementation")
     if not test_matrix_equal[matmul_unrolled[0]](C, A, B):
-        raise Error("Unroll output does not match naive implementation")
+        raise Error("Unrolled output does not match naive implementation")
     if not test_matrix_equal[matmul_unrolled[1]](
         C,
         A,
