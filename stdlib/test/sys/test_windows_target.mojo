@@ -42,7 +42,7 @@ def test_last_error():
     assert_true(last_operation_succeeded())
 
     # GetProcessId takes the handle to a process and returns its id. If the
-    # handle is null this will fail and returns an invalid handle error (error
+    # handle is null this will fail and return an invalid handle error (error
     # code 6).
     var succeeded = external_call["GetProcessId", Int](UnsafePointer[Int]())
 
