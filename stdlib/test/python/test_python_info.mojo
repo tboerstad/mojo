@@ -28,6 +28,6 @@ fn test_python_version(inout python: Python) raises:
     assert_equal(pythonVersion.patch, 8)
 
 
-def main():
+fn main():
     var python = Python()
     test_python_version(python)
