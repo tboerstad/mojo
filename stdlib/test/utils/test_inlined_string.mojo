@@ -177,7 +177,7 @@ def test_small_string_add():
     var s2: InlineString = InlineString("hello") + InlineString(" world")
 
     assert_equal(str(s2), "hello world")
-    assert_equal(len(s2), "11")
+    assert_equal(len(s2), 11)
 
     #
     # Test InlineString + String
@@ -186,4 +186,4 @@ def test_small_string_add():
     var s3: InlineString = InlineString("hello") + String(" world")
 
     assert_equal(str(s3), "hello world")
-    assert_equal(len(s3), "11")
+    assert_equal(len(s3), 11)
