@@ -456,7 +456,7 @@ def test_list_index():
     # Test empty slice
     with assert_raises(contains="ValueError: Given element is not in list"):
         _ = test_list_a.index(10, start=1, stop=1)
-    # Test empty slice with 0 start and end
+    # Test empty slice with 0 start and stop
     with assert_raises(contains="ValueError: Given element is not in list"):
         _ = test_list_a.index(10, start=0, stop=0)
 
@@ -784,7 +784,7 @@ def test_list_contains():
     assert_true(1 in x)
     assert_false(4 in x)
 
-    # TODO: implement List.__eq__ for Self[ComparableCollectionElement]
+    # TODO: implement List.__eq__ for Self[ComparableElement]
     # var y = List[List[Int]]()
     # y.append(List(1,2))
     # assert_equal(List(1,2) in y,True)
@@ -801,7 +801,7 @@ def test_list_init_span():
 
 def test_indexing():
     var l = List[Int](1, 2, 3)
-    assert_equal(l[int(1)], 2)
+    assert_equal(l[1], 2)
     assert_equal(l[False], 1)
     assert_equal(l[True], 2)
     assert_equal(l[2], 3)
