@@ -67,7 +67,7 @@ struct _GPUAddressSpace(EqualityComparable):
 
     @always_inline("nodebug")
     fn __eq__(self, other: Self) -> Bool:
-        """The True if the two address spaces are equal and False otherwise.
+        """True if the two address spaces are equal and False otherwise.
 
         Returns:
           True if the two address spaces are equal and False otherwise.
@@ -76,7 +76,7 @@ struct _GPUAddressSpace(EqualityComparable):
 
     @always_inline("nodebug")
     fn __eq__(self, other: AddressSpace) -> Bool:
-        """The True if the two address spaces are equal and False otherwise.
+        """True if the two address spaces are equal and False otherwise.
 
         Returns:
           True if the two address spaces are equal and False otherwise.
