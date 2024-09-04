@@ -294,7 +294,7 @@ struct _FixedString[CAP: Int](
 ):
     """A string with a fixed available capacity.
 
-    The string data is stored inline in this structs memory layout.
+    The string data is stored inline in this struct's memory layout.
 
     Parameters:
         CAP: The fixed-size count of bytes of string storage capacity available.
