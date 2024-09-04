@@ -32,7 +32,7 @@ def test_inlined_fixed_vector():
 
     assert_equal(5, len(vector))
 
-    # Can assign a specified index in static data range via `setitem`
+    # Can assign to a specified index in static data range via `setitem`
     vector[2] = -2
     assert_equal(0, vector[0])
     assert_equal(1, vector[1])
