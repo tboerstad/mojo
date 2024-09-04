@@ -22,7 +22,7 @@ def test_none_end_folds():
     assert_equal(all_def_slice.step, 1)
 
 
-# This requires parameter inference of StartT.
+# This requires parameter inference of Start.
 @value
 struct FunnySlice:
     var start: Int
