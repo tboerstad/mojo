@@ -64,7 +64,7 @@ fn test_time() raises:
     assert_true(t3 > 1 * ns_per_sec)
     assert_true(t3 < 10 * ns_per_sec)
 
-    # test now() directly since time_function doesn't use now on windows
+    # test now() directly since time_function doesn't use now on Windows
     var t4 = now()
     time_me()
     var t5 = now()
