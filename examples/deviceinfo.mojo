@@ -13,7 +13,7 @@
 # RUN: %mojo %s | FileCheck %s
 
 # This sample prints the current host system information using APIs from the
-# sys module.
+# sys module
 from sys.info import (
     _current_cpu,
     _current_target,
