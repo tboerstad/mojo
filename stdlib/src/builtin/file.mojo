@@ -143,7 +143,7 @@ struct FileHandle:
         """Reads data from a file and sets the file handle seek position. If
         size is left as the default of -1, it will read to the end of the file.
         Setting size to a number larger than what's in the file will set
-        String.size to the total number of bytes, and read all the data.
+        the String's size to the total number of bytes, and read all the data.
 
         Args:
             size: Requested number of bytes to read (Default: -1 = EOF).
@@ -213,7 +213,7 @@ struct FileHandle:
     ](self, ptr: DTypePointer[type], size: Int64 = -1) raises -> Int64:
         """Read data from the file into the pointer. Setting size will read up
         to `sizeof(type) * size`. The default value of `size` is -1 which
-        will read to the end of the file. Starts reading from the file handle
+        will read to the end of the file. Starts reading from the file handle's
         seek pointer, and after reading adds `sizeof(type) * size` bytes to the
         seek pointer.
 
@@ -286,7 +286,7 @@ struct FileHandle:
         """Reads data from a file and sets the file handle seek position. If
         size is left as default of -1, it will read to the end of the file.
         Setting size to a number larger than what's in the file will be handled
-        and set the List.size to the total number of bytes in the file.
+        and set the List's size to the total number of bytes in the file.
 
         Args:
             size: Requested number of bytes to read (Default: -1 = EOF).
@@ -377,7 +377,7 @@ struct FileHandle:
         ```mojo
         import os
         var f = open("/tmp/example.txt", "r")
-        f.seek(os.SEEK_CUR, 32)
+        f.seek(32, os.SEEK_CUR)
         ```
 
         Start from 32 bytes from the end of the file:
@@ -385,7 +385,7 @@ struct FileHandle:
         ```mojo
         import os
         var f = open("/tmp/example.txt", "r")
-        f.seek(os.SEEK_END, -32)
+        f.seek(-32, os.SEEK_END)
         ```
         .
         """
