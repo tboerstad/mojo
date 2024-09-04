@@ -36,6 +36,8 @@ def test_swap_MoveOnlyInt():
     assert_equal(b.data, 42)
 
 
+def main():
+
 def test_swap_String():
     var a: String = "Hello"
     var b: String = "World"
