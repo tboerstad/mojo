@@ -30,7 +30,7 @@ fn test_range() raises:
     var array_size: PythonObject = 2
 
     # we check that the numbers appear in order
-    # and that there are not less iterations than expected
+    # and that there are no less iterations than expected
     # by ensuring the list is empty at the end.
     var expected = List[Int](0, 1)
     for i in range(array_size):
