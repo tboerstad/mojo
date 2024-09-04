@@ -158,7 +158,7 @@ def test_unsafepointer_address_space():
     p2.free()
 
 
-# NOTE: Tests fails due to a `UnsafePointer` size
+# NOTE: Test fails due to a `UnsafePointer` size
 # and alignment constraint failing to be satisfied.
 #
 # def test_unsafepointer_zero_size():
