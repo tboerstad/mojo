@@ -543,7 +543,7 @@ struct List[T: CollectionElement](CollectionElement, Sized, Boolable):
         """Reserves the requested capacity.
 
         If the current capacity is greater or equal, this is a no-op.
-        Otherwise, the storage is reallocated and the date is moved.
+        Otherwise, the storage is reallocated and the data is moved.
 
         Args:
             new_capacity: The new capacity.
@@ -558,7 +558,7 @@ struct List[T: CollectionElement](CollectionElement, Sized, Boolable):
 
         If the new size is smaller than the current one, elements at the end
         are discarded. If the new size is larger than the current one, the
-        list is appended with new values elements up to the requested size.
+        list is appended with new value elements up to the requested size.
 
         Args:
             new_size: The new size.
@@ -568,8 +568,6 @@ struct List[T: CollectionElement](CollectionElement, Sized, Boolable):
             self.resize(new_size)
         else:
             self.reserve(new_size)
-            for i in range(new_size, self.size):
-                destroy_pointee(self.data + i)
             for i in range(self.size, new_size):
                 initialize_pointee_copy(self.data + i, value)
             self.size = new_size
