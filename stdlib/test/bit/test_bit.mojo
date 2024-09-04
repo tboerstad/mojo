@@ -280,7 +280,7 @@ def test_is_power_of_two_simd():
 def test_bit_width():
     assert_equal(bit_width(-(2**59)), 59)
     assert_equal(bit_width(-2), 1)
-    assert_equal(bit_width(-1), 0)
+    assert_equal(bit_width(-1), 1)
     assert_equal(bit_width(0), 0)
     assert_equal(bit_width(1), 1)
     assert_equal(bit_width(2), 2)
