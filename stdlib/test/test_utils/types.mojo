@@ -34,7 +34,7 @@ struct MoveOnly[T: Movable](Movable):
         """Move construct a MoveOnly from an existing variable.
 
         Args:
-            other: The other instance that we copying the payload from.
+            other: The other instance that we are copying the payload from.
         """
         self.data = other.data^
 
