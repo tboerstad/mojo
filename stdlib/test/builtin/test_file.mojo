@@ -182,7 +182,7 @@ struct Word:
     var second_letter: UInt8
     var third_letter: UInt8
     var fourth_letter: UInt8
-    var fith_letter: UInt8
+    var fifth_letter: UInt8
 
     fn __str__(self) -> String:
         var word = List[UInt8](capacity=6)
@@ -214,9 +214,9 @@ def test_file_read_to_dtype_pointer():
 def test_file_get_raw_fd():
     # since JIT and build give different file descriptors, we test by checking
     # if we printed to the right file.
-    var f1 = open(Path(TEMP_FILE_DIR) / "test_file_dummy_1", "rw")
-    var f2 = open(Path(TEMP_FILE_DIR) / "test_file_dummy_2", "rw")
-    var f3 = open(Path(TEMP_FILE_DIR) / "test_file_dummy_2", "rw")
+    var f1 = open(Path(TEMP_FILE_DIR) / "test_file_dummy_1", "r+")
+    var f2 = open(Path(TEMP_FILE_DIR) / "test_file_dummy_2", "r+")
+    var f3 = open(Path(TEMP_FILE_DIR) / "test_file_dummy_3", "r+")
 
     print(
         "test from file 1",
