@@ -46,8 +46,8 @@ def main():
         os = "linux"
     elif os_is_macos():
         os = "macOS"
-    else:
-        os = "windows"
+    elif os_is_windows():
+        os = "Windows"
     var cpu = String(_current_cpu())
     var arch = String(_triple_attr())
     var cpu_features = String("")
