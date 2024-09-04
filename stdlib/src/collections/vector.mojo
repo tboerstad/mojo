@@ -64,7 +64,7 @@ fn _calculate_fixed_vector_default_size[type: AnyTrivialRegType]() -> Int:
     alias prefered_inline_bytes = prefered_bytecount - sizeof[
         InlinedFixedVector[type, 0]
     ]()
-    alias num_elements = prefered_inline_bytes // sizeof_type
+    alias num_elements = preferred_inline_bytes // sizeof_type
     return num_elements or 1
 
 
