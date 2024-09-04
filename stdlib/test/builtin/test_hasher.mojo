@@ -60,7 +60,7 @@ def test_hash_with_hasher():
 
 
 @value
-struct ComplexeHashableStruct(_HashableWithHasher):
+struct ComplexHashableStruct(_HashableWithHasher):
     var _value1: SomeHashableStruct
     var _value2: SomeHashableStruct
 
@@ -78,7 +78,7 @@ def test_complex_hasher():
     assert_equal(hasher^.finish(), 52)
 
 
-def test_complexe_hash_with_hasher():
+def test_complex_hash_with_hasher():
     var hashable = ComplexeHashableStruct(
         SomeHashableStruct(42), SomeHashableStruct(10)
     )
@@ -116,5 +116,5 @@ def main():
     test_hasher()
     test_hash_with_hasher()
     test_complex_hasher()
-    test_complexe_hash_with_hasher()
+    test_complex_hash_with_hasher()
     test_update_with_bytes()
