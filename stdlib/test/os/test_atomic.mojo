@@ -66,7 +66,7 @@ fn test_atomic_floating_point() raises:
     assert_equal(atom.value, 0.0)
 
 
-def test_compare_exchange_weak():
+fn test_compare_exchange_weak():
     var atom: Atomic[DType.int64] = 3
     var expected = Int64(3)
     var desired = Int64(3)
@@ -89,7 +89,7 @@ def test_compare_exchange_weak():
     assert_false(ok)
 
 
-def main():
+fn main():
     test_atomic()
     test_atomic_floating_point()
     test_compare_exchange_weak()
