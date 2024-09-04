@@ -271,7 +271,7 @@ def test_dict_copy_calls_copy_constructor():
 
     # test values copied to new Dict
     var copy = Dict(orig)
-    # I _may_ have thoughts about where our performance issues
+    # I may have thoughts about where our performance issues
     # are coming from :)
     assert_equal(1, orig["a"].copy_count)
     assert_equal(2, copy["a"].copy_count)
@@ -307,7 +307,7 @@ def test_dict_update_empty_origin():
     assert_equal(orig["c"], 4)
 
 
-def test_dict_or():
+def test_dict_or() raises:
     var orig = Dict[String, Int]()
     var new = Dict[String, Int]()
 
@@ -451,7 +451,7 @@ def test_dict():
     test["test_dict_update_empty_origin", test_dict_update_empty_origin]()
     test["test_dict_update_empty_new", test_dict_update_empty_new]()
     test["test_mojo_issue_1729", test_mojo_issue_1729]()
-    test["test dict or", test_dict_or]()
+    test["test_dict_or", test_dict_or]()
 
 
 def test_taking_owned_kwargs_dict(owned kwargs: OwnedKwargsDict[Int]):
@@ -503,7 +503,7 @@ def test_owned_kwargs_dict():
     test_taking_owned_kwargs_dict(owned_kwargs^)
 
 
-def test_find_get():
+def test_find_get() raises:
     var some_dict = Dict[String, Int]()
     some_dict["key"] = 1
     assert_equal(some_dict.find("key").value()[], 1)
@@ -524,7 +524,7 @@ fn test_clear() raises:
     assert_equal(len(some_dict), 0)
 
 
-def main():
+def main() raises:
     test_dict()
     test_dict_fromkeys()
     test_dict_fromkeys_optional()
