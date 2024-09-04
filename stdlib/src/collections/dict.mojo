@@ -496,7 +496,7 @@ struct Dict[K: KeyElement, V: CollectionElement](
         return dict
 
     fn __copyinit__(inout self, existing: Self):
-        """Copy an existing dictiontary.
+        """Copy an existing dictionary.
 
         Args:
             existing: The existing dict.
@@ -508,7 +508,7 @@ struct Dict[K: KeyElement, V: CollectionElement](
         self._entries = existing._entries
 
     fn __moveinit__(inout self, owned existing: Self):
-        """Move data of an existing dict into a new one.
+        """Move data of an existing dictionary into a new one.
 
         Args:
             existing: The existing dict.
