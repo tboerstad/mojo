@@ -176,9 +176,9 @@ def test_nextafter():
     assert_almost_equal(nextafter(Float64(0), Float64(0)), 0)
     assert_almost_equal(nextafter(Float64(0), Float64(1)), 5e-324)
     assert_almost_equal(nextafter(Float64(0), Float64(-1)), -5e-324)
-    assert_almost_equal(nextafter(Float64(1), Float64(0)), 0.99999999999999988)
+    assert_almost_equal(nextafter(Float64(1), Float64(0)), 0.99999999999999989)
     assert_almost_equal(
-        nextafter(Float64(-1), Float64(0)), -0.99999999999999988
+        nextafter(Float64(-1), Float64(0)), -0.99999999999999989
     )
     assert_almost_equal(
         nextafter(SIMD[DType.float64, 2](0, 1), SIMD[DType.float64, 2](0, 1)),
@@ -194,11 +194,11 @@ def test_nextafter():
     )
     assert_almost_equal(
         nextafter(SIMD[DType.float64, 2](1, 1), SIMD[DType.float64, 2](0, 0)),
-        SIMD[DType.float64, 2](0.99999999999999988, 0.99999999999999988),
+        SIMD[DType.float64, 2](0.99999999999999989, 0.99999999999999989),
     )
     assert_almost_equal(
         nextafter(SIMD[DType.float64, 2](-1, -1), SIMD[DType.float64, 2](0, 0)),
-        SIMD[DType.float64, 2](-0.99999999999999988, -0.99999999999999988),
+        SIMD[DType.float64, 2](-0.99999999999999989, -0.99999999999999989),
     )
 
 
