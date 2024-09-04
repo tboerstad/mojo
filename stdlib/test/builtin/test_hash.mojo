@@ -56,7 +56,7 @@ def test_hash_byte_array():
     )
 
     # This test is just really bad. We really need to re-evaluate the
-    # right way to test these. Hash function behavior varies a bit  based
+    # right way to test these. Hash function behavior varies a bit based
     # on architecture, so these tests as-is end up being really flaky.
     # Making this _much_ more relaxed for now, but at least still testing
     # that at least the hash function returns _some_ different things.
