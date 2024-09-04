@@ -164,10 +164,10 @@ struct Optional[T: CollectionElement](CollectionElement, Boolable):
     ) -> Reference[T, self.is_mutable, self.lifetime]:
         """Retrieve a reference to the value of the Optional.
 
-        This check to see if the optional contains a value.
+        This checks to see if the optional contains a value.
         If you call this without first verifying the optional with __bool__()
-        eg. by `if my_option:` or without otherwise knowing that it contains a
-        value (for instance with `or_else`), the program will abort
+        e.g. by `if my_option:` or without otherwise knowing that it contains a
+        value (for instance with `or_else`), the program will abort.
 
         Returns:
             A reference to the contained data of the option as a Reference[T].
@@ -185,7 +185,7 @@ struct Optional[T: CollectionElement](CollectionElement, Boolable):
 
         This doesn't check to see if the optional contains a value.
         If you call this without first verifying the optional with __bool__()
-        eg. by `if my_option:` or without otherwise knowing that it contains a
+        e.g. by `if my_option:` or without otherwise knowing that it contains a
         value (for instance with `or_else`), you'll get garbage unsafe data out.
 
         Returns:
@@ -212,9 +212,9 @@ struct Optional[T: CollectionElement](CollectionElement, Boolable):
         The caller takes ownership over the new value, which is moved
         out of the Optional, and the Optional is left in an empty state.
 
-        This check to see if the optional contains a value.
+        This checks to see if the optional contains a value.
         If you call this without first verifying the optional with __bool__()
-        eg. by `if my_option:` or without otherwise knowing that it contains a
+        e.g. by `if my_option:` or without otherwise knowing that it contains a
         value (for instance with `or_else`), you'll get garbage unsafe data out.
 
         Returns:
