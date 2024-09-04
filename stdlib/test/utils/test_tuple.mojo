@@ -55,7 +55,7 @@ def test_static_int_tuple():
     )
 
     # Note: index comparison is intended for access bound checking, which is
-    #  usually all-element semantic, i.e. true if true for all positions.
+    #  usually all-element semantics, i.e. true if true for all positions.
     assert_true(
         StaticIntTuple[5](1, 2, 3, 4, 5) < StaticIntTuple[5](4, 5, 6, 7, 8)
     )
