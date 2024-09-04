@@ -39,7 +39,7 @@ def main():
             files_without_license.append(file_path)
 
     if len(files_without_license) > 0:
-        print("The following files have missing licences 💥 💔 💥")
+        print("The following files have missing licenses 💥 💔 💥")
         for file in files_without_license:
             print(file[])
         print("Please add the license to each file before committing.")
