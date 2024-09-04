@@ -35,7 +35,7 @@ def test_setenv():
     assert_equal(getenv("NEW_VAR"), "FOO")
 
     assert_equal(setenv("NEW_VAR", "BAR", True), True)
-    assert_equal(getenv("NEW_VAR", "BAR"), "BAR")
+    assert_equal(getenv("NEW_VAR"), "BAR")
 
     assert_equal(setenv("=", "INVALID", True), False)
 
