@@ -214,7 +214,7 @@ fn exists[pathlike: os.PathLike](path: pathlike) -> Bool:
     Returns:
       Returns True if the path exists and is not a broken symbolic link.
     """
-    return exists(path.__fspath__())
+    return lexists(path.__fspath__())
 
 
 # ===----------------------------------------------------------------------=== #
