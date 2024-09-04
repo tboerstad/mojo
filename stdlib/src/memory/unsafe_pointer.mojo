@@ -405,7 +405,7 @@ fn destroy_pointee(ptr: UnsafePointer[_]):
     The pointer must not be null, and the pointer memory location is assumed
     to contain a valid initialized instance of `T`.  This is equivalent to
     `_ = move_from_pointee(ptr)` but doesn't require `Movable` and is more
-    efficient becase it doesn't invoke `__moveinit__`.
+    efficient because it doesn't invoke `__moveinit__`.
 
     Args:
         ptr: The pointer whose pointee this destroys.
@@ -491,7 +491,7 @@ fn move_pointee[T: Movable](*, src: UnsafePointer[T], dst: UnsafePointer[T]):
     pointer are not valid unless and until a new, valid value has been
     moved into this pointer's memory location using `initialize_pointee_move()`.
 
-    This transfers the value out of `self` and into `dest` using at most one
+    This transfers the value out of `src` and into `dst` using at most one
     `__moveinit__()` call.
 
     Safety:
