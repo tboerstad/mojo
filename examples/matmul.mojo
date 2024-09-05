@@ -178,15 +178,12 @@ fn matmul_tiled(inout C: Matrix, A: Matrix, B: Matrix):
 # Unroll the vectorized loop by a constant factor
 # Also parallelize with num_workers threads
 fn matmul_unrolled[mode: Int](inout C: Matrix, A: Matrix, B: Matrix):
-    var num_workers: Int
-    if mode == 1:
-        num_workers = info.num_physical_cores()
-    elif mode == 2:
-        num_workers = info.num_logical_cores()
-    elif mode == 3:
-        num_workers = info.num_performance_cores()
-    else:
-        num_workers = C.rows
+    var num_workers = (
+        info.num_physical_cores() if mode == 1
+        else info.num_logical_cores() if mode == 2
+        else info.num_performance_cores() if mode == 3
+        else C.rows
+    )
 
     @parameter
     fn calc_row(m: Int):
