@@ -364,10 +364,10 @@ struct DType(
         e.g. either fp16 or bf16.
 
         Returns:
-            True if the type is a half-precision float, false otherwise..
+            True if the type is a half-precision float, false otherwise.
         """
 
-        return self in (DType.bfloat16, DType.float16)
+        return self == DType.bfloat16 or self == DType.float16
 
     @always_inline("nodebug")
     fn is_numeric(self) -> Bool:
