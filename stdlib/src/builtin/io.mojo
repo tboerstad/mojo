@@ -281,11 +281,13 @@ fn _float_repr[
     var p = buffer
     alias minus = ord("-")
     alias dot = ord(".")
+    alias e_lower = ord("e")
+    alias e_upper = ord("E")
     if p[] == minus:
         p += 1
     while p[] != 0 and isdigit(p[]):
         p += 1
-    if p[]:
+    if p[] == dot or p[] == e_lower or p[] == e_upper:
         return n
     p[] = dot
     p += 1
