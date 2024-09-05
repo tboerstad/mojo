@@ -165,7 +165,7 @@ struct StringLiteral(
         Returns:
             True if this StringLiteral is greater than or equal to the RHS StringLiteral and False otherwise.
         """
-        return not (self < rhs)
+        return self > rhs or self == rhs
 
     fn __contains__(self, substr: StringLiteral) -> Bool:
         """Returns True if the substring is contained within the current string.
