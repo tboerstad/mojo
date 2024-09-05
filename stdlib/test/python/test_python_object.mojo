@@ -307,6 +307,7 @@ fn test_string_conversions() raises -> None:
     test_string_ref()
     test_string()
     test_type_object()
+    test_type_object()
 
 
 def test_len():
