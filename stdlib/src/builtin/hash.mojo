@@ -167,7 +167,7 @@ fn _hash_simd[type: DType, size: Int](data: SIMD[type, size]) -> UInt:
 
     @parameter
     if type is DType.bool:
-        return _hash_simd(data.cast[DType.int8]())
+        return _hash_simd(data.cast[DType.uint8]().select(1, 0))
 
     var hash_data = _ankerl_init[type, size]()
     hash_data = _ankerl_hash_update(hash_data, data)
