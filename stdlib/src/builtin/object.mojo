@@ -1863,7 +1863,7 @@ struct object(
         if not self._value.is_list():
             raise Error("TypeError: can only assign items in lists")
         var index = Self._convert_index_to_int(i)
-        self._value.set_list_element(index.value, value._value.copy())
+        self._value.set_list_element(index, value._value.copy())
 
     @always_inline
     fn __setitem__(self, i: object, j: object, value: object) raises:
