@@ -50,14 +50,14 @@ def test_out_of_bounds_message():
 
 def test_normalize_index():
     container = List[Int](1, 1, 1, 1)
-    assert_equal(normalize_index[""](-4, container), 0)
-    assert_equal(normalize_index[""](-3, container), 1)
-    assert_equal(normalize_index[""](-2, container), 2)
-    assert_equal(normalize_index[""](-1, container), 3)
-    assert_equal(normalize_index[""](0, container), 0)
-    assert_equal(normalize_index[""](1, container), 1)
-    assert_equal(normalize_index[""](2, container), 2)
-    assert_equal(normalize_index[""](3, container), 3)
+    assert_equal(normalize_index[List[Int]](-4, container), 0)
+    assert_equal(normalize_index[List[Int]](-3, container), 1)
+    assert_equal(normalize_index[List[Int]](-2, container), 2)
+    assert_equal(normalize_index[List[Int]](-1, container), 3)
+    assert_equal(normalize_index[List[Int]](0, container), 0)
+    assert_equal(normalize_index[List[Int]](1, container), 1)
+    assert_equal(normalize_index[List[Int]](2, container), 2)
+    assert_equal(normalize_index[List[Int]](3, container), 3)
 
 
 def main():
