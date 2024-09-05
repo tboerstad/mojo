@@ -115,4 +115,4 @@ fn _debug_assert_msg[
         if is_warning:
             print(loc.prefix("Assert Warning:"), msg)
         else:
-            abort(loc.prefix("Assert Error: " + String.format_sequence(msg)))
+            abort(String.format_sequence(loc.prefix("Assert Error: "), msg))
