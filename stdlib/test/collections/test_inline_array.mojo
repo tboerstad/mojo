@@ -195,7 +195,6 @@ def test_inline_array_runs_destructors():
     var pointer_to_destructor_counter = UnsafePointer.address_of(
         destructor_counter
     )
-    alias capacity = 32
     var inline_list = InlineArray[
         ValueDestructorRecorder, 4, run_destructors=True
     ](
