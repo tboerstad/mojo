@@ -534,6 +534,7 @@ def test_dict_popitem():
     item = dict.popitem()
     assert_equal(item.key, "a")
     assert_equal(item.value, 1)
+    assert_equal(len(dict), 0)  # Check if the dictionary is empty after popping all items
     with assert_raises(contains="KeyError"):
         _ = dict.popitem()
 
