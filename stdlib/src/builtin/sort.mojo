@@ -55,7 +55,7 @@ fn _insertion_sort[
         # Find the placement of the value in the array, shifting as we try to
         # find the position. Throughout, we assume array[start:i] has already
         # been sorted.
-        while j > 0 and cmp_fn(value, array[j - 1]):
+        while j > 0 and cmp_fn(_SortWrapper(data=value), _SortWrapper(data=array[j - 1])):
             array[j] = array[j - 1]
             j -= 1
 
