@@ -40,7 +40,7 @@ fn time_templated_function[
     return time_function[time_me_templated[type]]()
 
 
-fn time_capturing_function(iters: Int) -> Int:
+fn time_capturing_function() -> Int:
     @parameter
     fn time_fn():
         sleep(1)
@@ -63,7 +63,7 @@ fn test_time() raises:
     assert_true(t2 > 1 * ns_per_sec)
     assert_true(t2 < 10 * ns_per_sec)
 
-    var t3 = time_capturing_function(42)
+    var t3 = time_capturing_function()
     assert_true(t3 > 1 * ns_per_sec)
     assert_true(t3 < 10 * ns_per_sec)
 
