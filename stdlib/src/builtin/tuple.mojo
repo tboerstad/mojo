@@ -197,8 +197,6 @@ struct Tuple[*element_types: Movable](Sized, Movable):
 
         @parameter
         for i in range(len(VariadicList(element_types))):
-
-            @parameter
             if _type_is_eq[element_types[i], T]():
                 var elt_ptr = UnsafePointer.address_of(self[i]).bitcast[T]()
                 if elt_ptr[] == value:
