@@ -154,7 +154,7 @@ def test_optional_equality():
     assert_true(o != None)
     assert_true(n != 11)
     assert_true(n == n)
-    assert_true(n == None)
+    assert_true(n is None)
 
 
 def main():
