@@ -71,7 +71,7 @@ struct TempEnvWithCleanup:
             _ = os.setenv(key, value, overwrite=True)
 
     fn __exit__(inout self):
-        for key_value in self.vars_to_set.items():
+        for key_value in self._vars_back.items():
             var key = key_value[].key
             var value = key_value[].value
             _ = os.setenv(key, value, overwrite=True)
