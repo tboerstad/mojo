@@ -55,7 +55,7 @@ fn test_mkdir_and_rmdir(path: String) raises:
         os.rmdir(path)
 
 
-fn test_mkdir_and_rmdir(path: Path) raises:
+fn test_mkdir_and_rmdir_path(path: Path) raises:
     try:
         os.rmdir(path)
     except:
@@ -139,9 +139,9 @@ fn test_rmdir_not_empty() raises:
 
 def main():
     test_mkdir_and_rmdir("my_dir")
-    test_mkdir_and_rmdir(Path("my_dir"))
+    test_mkdir_and_rmdir_path(Path("my_dir"))
     if os.env.getenv("HOME") or os.env.getenv("USERPROFILE"):
-        test_mkdir_and_rmdir(Path("~/my_dir").expanduser())
+        test_mkdir_and_rmdir_path(Path("~/my_dir").expanduser())
 
     test_makedirs_and_removedirs(os.path.join("dir1", "dir2", "dir3"))
     test_makedirs_and_removedirs(Path("dir1") / "dir2" / "dir3")
