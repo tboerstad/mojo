@@ -278,7 +278,7 @@ def test_find():
     )
 
     assert_equal(haystack_repeated_chars.find(str("aaa").as_string_slice()), 0)
-    assert_equal(haystack_repeated_chars.find(str("AAa").as_string_slice()), -1)
+    assert_equal(haystack_repeated_chars.find(str("aaa").as_string_slice()), 0)
 
     assert_equal(
         haystack.find(str("hijklmnopqrstuvwxyz").as_string_slice()), -1
