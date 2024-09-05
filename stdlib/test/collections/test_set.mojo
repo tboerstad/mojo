@@ -492,6 +492,7 @@ def test_set_str():
     var b = Set[String]("a", "b")
     AE(b.__str__(), "{'a', 'b'}")
     AE(Set[Int]().__str__(), "{}")
+    AE(Set[String]().__str__(), "{}")
 
 
 fn test[name: String, test_fn: fn () raises -> object]() raises:
